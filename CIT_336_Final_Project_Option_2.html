@@ -1,0 +1,52 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function DailySales(date, vanilla, chocolate, strawberry)
+        {
+          this.date_sales = date;
+          this.vanilla_scoops = vanilla;
+          this.chocolate_scoops = chocolate;
+          this.strawberry_scoops = strawberry;
+          this.calculateTotal = function()
+          {
+         	 var total = this.vanilla_scoops + this.chocolate_scoops + this.strawberry_scoops;
+         	 return (total);
+          }
+		  this.displaySales = function()
+		  {
+            document.write("Date: " + this.date_sales + "<br />");
+            document.write("Vanilla: " + this.vanilla_scoops + "<br />");
+            document.write("Chocolate: " + this.chocolate_scoops + "<br />");
+            document.write("Strawberry: " + this.strawberry_scoops + "<br />");
+            var total = this.calculateTotal();
+            document.write("Total Scoops Sold: " + total + "<br /><br />");
+		  }
+		}
+		
+		//Note to self
+		/* try using a function (Maybe something like this:
+		
+		        function RNG()
+		        {
+		        Math.floor(Math.random() * 100) + 1;
+		        }
+		
+		that way the DailySales function is dynamic instead of having the                 same values everytime)
+		
+		*/
+		
+        var day1 = new DailySales("May 14, 2020", 267, 185, 679);
+        var day2 = new DailySales("May 15, 2020", 175, 130, 130);
+        var day3 = new DailySales("May 16, 2020", 192, 295, 39);
+        var day4 = new DailySales("May 17, 2020", 789, 462, 307);
+        var day5 = new DailySales("May 18, 2020", 1337, 718, 573);
+        day1.displaySales();
+        day2.displaySales();
+        day3.displaySales();
+        day4.displaySales();
+        day5.displaySales();
+	</script>
+</head>
+<body>
+</body>
+</html>
